@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<style type="text/css">
+    h1{
+        margin-top: 10px;
+        text-align: center;
+        text-decoration: underline;
+        color: orange;
+    }
+    a{
+        text-decoration: None;
+        color: blue;
+    }
+    h5{
+        margin-top: 0px;
+        text-align: right;
+        margin-right: 5px;
+    }
+    
+    ul{
+        list-style-type: None;
+    }
+    .addnew{
+        padding-left: 30px;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class = "heading">
+        <h1><center>Exam Portal</center></h1>
+        </div>
+        <div class="row">
+            <div class="col-md-3 addnew"><a href="/blog/Newpage"><h3>Add a new Post</h3></a></div>
+            <div class="col-md-5"></div>
+            <div class="col-md-2"><a  href="/blog/{{ login }}"><h3 class= "login">{{ login }}</h3></a></div>
+            <div class="col-md-2"><a href="/blog/signup"><h3 class="right">{{ signup }}</h3></a></div>
+        </div >
+        <div>
+        {% block content %}
+        {% endblock %}
+        </div>
+        <hr>
+    </div>
+
+</body>
+</html>

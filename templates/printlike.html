@@ -1,0 +1,13 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>printlike</title>
+</head>
+<body>
+{% for i in posts%}
+<h3>print {{ i.poster_id }}</h3>
+<p>{{ i.liker_name }}<p>
+{% endfor %}
+</body>
+</html>

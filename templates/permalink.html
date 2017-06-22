@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>blog</title>
+</head>
+<style type="text/css">
+	a{
+		text-decoration: None;
+		color: black;
+		text-align: right;
+	}
+	h5{
+		margin-top: 0px;
+		text-align: right;
+	}
+	
+	body {
+		font-family: sans-serif;
+		width:800px;
+		margin: 0 auto;
+		padding:10px;
+	}
+</style>
+<body>
+<a href="/blog"><h1><center>Exam Portal</center></h1></a>
+<a href="/blog/Newpage"><h3>Add a new post</h3></a>
+
+<div >
+<hr>
+
+<h5>{{ posts.created.strftime("%b %d, %Y") }}</h5>
+<h1>{{ posts.title }}</h1>
+<p>{{ posts.post | safe}}</p>
+<h2>Posted by {{ posts.poster_name}}</h2>
+<h3>Likes : {{posts.likes}}
+
+</div >
+</body>
+</html>
